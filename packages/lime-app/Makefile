@@ -6,12 +6,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lime-app
-PKG_VERSION:=v0.2.5
+PKG_VERSION:=v0.2.51
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_HASH:=8b182cf9c55b79f87b7abb902fcfab0f0d04fde1708a7e56ba1f2fde407ba38f
-PKG_SOURCE_URL:=https://github.com/libremesh/lime-app/releases/download/$(PKG_VERSION)
+PKG_HASH:=35bb04bdbd17adf56fb790f6bf3ae9acd0bae7217d5b7c0f50ff335955d09ce1
+PKG_SOURCE_URL:=https://libre.luandro.com
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -22,7 +22,8 @@ define Package/$(PKG_NAME)
 	URL:=http://github.com/libremesh/lime-app
 	DEPENDS:=+uhttpd +uhttpd-mod-ubus \
 		+ubus-lime-location +ubus-lime-metrics +ubus-lime-utils \
-		+ubus-lime-openairview +ubus-lime-grondrouting
+		+ubus-lime-openairview +ubus-lime-grondrouting \
+		+pirania +pirania-app
 	PKGARCH:=all
 endef
 
